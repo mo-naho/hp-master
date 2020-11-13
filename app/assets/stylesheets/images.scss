@@ -1,0 +1,18 @@
+// Place all the styles related to the images controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* =================================================
+　画像テーブル
+================================================= */
+#imgtable {
+  margin-top: 50px;
+}
+#imgtable th {
+  border-bottom: 2px solid black;
+}
+#imgtable td {
+  padding: 8px 15px;
+  border-bottom: 1px solid black;
+}

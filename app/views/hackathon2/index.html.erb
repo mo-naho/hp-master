@@ -1,0 +1,129 @@
+<div class="body">
+<% provide(:title, "VR作品制作ハッカソン") %>
+
+<header>
+  <div id="wrapper_menu_icon">
+    <a href="/home/news" class="menu_icon"><%= image_tag 'news.png', id: 'news' %></a>
+    <a href="/home/activity" class="menu_icon"><%= image_tag 'activity.png', id: 'activity' %></a>
+    <a href="/yozawiza" class="menu_icon" target="_blank"><%= image_tag 'product.png', id: 'product' %></a>
+    <a href="http://www.prontiatvr.com/learning/devblog" class="menu_icon"><%= image_tag 'learning.png', id: 'learning' %></a>
+    <a href="/home/event" class="menu_icon"><%= image_tag 'event_red.png', id: 'event' %></a>
+    <a href="/contacts/new" class="menu_icon"><%= image_tag 'contact.png', id: 'contact' %></a>
+  </div>
+</header>
+
+<div id="hackathon_area">
+  <h1>VR作品制作ハッカソン</h1>
+
+  <h2>イベント概要</h2>
+  <p>　プロンティアットVRでハッカソンを開催します。2日間で集中してVRアプリを開発しましょう！<br>
+    UE4の技術はもちろん、共同開発のノウハウや独創的なアイデアを出す方法などを学ぶことができます。
+    さらに、作成したVRアプリは11/26〜28に開催される同志社EVEで展示することができます！</p>
+
+  <h2>こんな方にオススメです！</h2>
+  <p>VRやゲームの開発に興味関心のある学生、アマチュア</p>
+  <p>団体でも個人でも参加できます！</p>
+
+  <h2>詳細</h2>
+  <div id="detail">
+    <div class="inner_detail">
+      <p>全2回、11:00 〜 18:00（昼休憩あり）<br>原則全日参加</p>
+      <p><b>第1回　2017/11/11(土)</b>　企画案出し<br>
+      　　　　　　　　　　　　ブレインライティング<br>
+      　　　　　　　　　　　　アプリ実装</p>
+      <p><b>第2回　2017/11/12(日)</b>　アプリ実装<br>
+      　　　　　　　　　　　　スマホに書き出し</br>
+      　　　　　　　　　　　　発表・アプリ体験会</p>
+
+    </div>
+  <br>
+
+  </div>
+
+  <h2>持ち物</h2>
+  <p>・パソコン<br>　※事前にUnrealEngin4.16のインストールをお願いします。</p>
+  <p>・昼食</p>
+
+  <h2>パソコンの推奨スペック</h2>
+  <p>プロセッサ　：クアッドコアIntel または AMD<br>　　　　　　　 2.5GHz以上のプロセッサ</p>
+  <p>メモリ　　　：8GB RAM</p>
+  <p>ビデオカード：NVIDIA geForce GTX470 または AMD Radeon 6870HDシリーズ、<br>　　　　　　　またはそれ以上のビデオカード</p>
+  <p>※設定によってはビデオカードがない、または推奨スペック以下のPCでも動きます。推奨スペックPCをお持ちでない方は以下のサイトを参考に設定をお試し下さい。<br>
+    　<a href="http://historia.co.jp/archives/1885">http://historia.co.jp/archives/1885</a><br>
+    　<a href="http://unrealengine.hatenablog.com/entry/2014/10/24/212222">http://unrealengine.hatenablog.com/entry/2014/10/24/212222</a>
+
+  <h2>場所</h2>
+  <p>同志社大学京田辺キャンパス　ローム記念館3F　オープンスペース</p>
+  <p>【アクセス】<br>　JR学研都市線「同志社前駅」徒歩10分<br>　近鉄京都線「興戸駅」徒歩15分</p>
+
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScOVgyhnwSmBD2JMmUiCQgOYDaXgzE-wYwMUm5IYxXclqNiPg/viewform" id="ws_apply" target="_blank">参加を申し込む</a>
+
+  <a href="/home/event" id="for_events">イベント一覧に戻る</a>
+
+</div>
+
+<footer>
+  <div id="gray">
+    <p><br>同志社ローム記念館プロジェクト<br>
+      <a href="/home"><%= image_tag 'pjlogo.png' %></a>
+    </p>
+  </div>
+  <div id="sns">
+    <div id="twitter">
+      <a href="https://twitter.com/prontiatvr" target="_blank"><%= image_tag 'twitter.png', class:'sns_icon' %><p>@prontiatvr</p></a>
+      <div class="clear"></div>
+    </div>
+    <div id ="facebook">
+      <a href="https://www.facebook.com/prontiat/" target="_blank"><%= image_tag 'facebook.png', class:'sns_icon' %><p>https://www.facebook.com/prontia</p></a>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div id="f_right">
+    <div id="f_menu">
+      <h4>
+        <%= link_to '｜ニュース', '/home/news' %>
+        <%= link_to '｜活動概要', '/home/activity' %>
+        <%= link_to '｜プロダクト', '/yozawiza', :target=>["_blank"] %>
+        <%= link_to '｜ラーニング', 'http://www.prontiatvr.com/learning/devblog' %>
+        <%= link_to '｜イベント', '/home/event' %>
+        <%= link_to '｜コンタクト｜', '/contacts/new' %>
+      </h4>
+    </div>
+    <div id="copyright">
+      <p>Copyright © プロンティアットVR　All Rights Reserved.</p>
+    </div>
+  </div>
+  <div class="clear"></div>
+</footer>
+
+<script>
+ //マウスオーバーでアイコン変わる
+ $(document).ready(function(){
+  $("img#news").mouseover(function(){
+    $(this).attr("src","<%= asset_path 'news_red.png' %>").attr("alt","News_on")
+  }).mouseout(function(){
+    $(this).attr("src","<%= asset_path 'news.png' %>").attr("alt","News")
+  });
+  $("img#activity").mouseover(function(){
+    $(this).attr("src","<%= asset_path 'activity_red.png' %>").attr("alt","Activity_on")
+  }).mouseout(function(){
+    $(this).attr("src","<%= asset_path 'activity.png' %>").attr("alt","Activity")
+  });
+  $("img#product").mouseover(function(){
+    $(this).attr("src","<%= asset_path 'product_red.png' %>").attr("alt","Product_on")
+  }).mouseout(function(){
+    $(this).attr("src","<%= asset_path 'product.png' %>").attr("alt","Product")
+  });
+  $("img#learning").mouseover(function(){
+    $(this).attr("src","<%= asset_path 'learning_red.png' %>").attr("alt","Learning_on")
+  }).mouseout(function(){
+    $(this).attr("src","<%= asset_path 'learning.png' %>").attr("alt","Learning")
+  });
+  $("img#contact").mouseover(function(){
+    $(this).attr("src","<%= asset_path 'contact_red.png' %>").attr("alt","Contact_on")
+  }).mouseout(function(){
+    $(this).attr("src","<%= asset_path 'contact.png' %>").attr("alt","Contact")
+  });
+});
+</script>
+</div>

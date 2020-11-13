@@ -1,0 +1,60 @@
+// Place all the styles related to the admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+h2, p, .add{
+  padding-left: 20px;
+}
+h2{
+  font-size: 28px;
+}
+#signout{
+  padding-right: 20px;
+}
+.add a, #under p a{
+  text-decoration: none;
+  color: white;
+  padding: 8px 15px;
+  border: 1px solid white;
+}
+p a{
+  text-decoration: none;
+  color: white;
+}
+#under{
+  float: left;
+}
+#signout{
+  float: right;
+  color: white;
+  position: relative;
+  top: 20px;
+  right: 20px;
+  border: 1px solid white;
+  padding: 8px 15px;
+}
+table{
+  margin:0 40px;
+}
+.index th, .index td{
+  border-bottom:2px solid lightgray;
+  border-right: 2px solid lightgray;
+}
+.index td{
+  border: 2ox solid red;
+}
+.back p a{
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 1px solid white;
+}
+.name p{
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px 0 22px 0;
+
+}
+.name h1{
+  margin: 22px 0 0 0;
+}

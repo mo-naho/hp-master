@@ -1,0 +1,173 @@
+<div class="body">
+<div class="pc">
+  <div class="path clearfix">
+    <a href="/home"><%= image_tag "2018pjlogo.png", class:"high_pjlogo" %></a>
+    <div class="menu">
+      <a href="/home/news"><%= image_tag "2018moji_news.png" %></a><h1>|</h1>
+      <a href="/home/event"><%= image_tag "2018moji_event.png" %></a><h1>|</h1>
+      <a href="/home/activity"><%= image_tag "2018moji_activity.png" %></a><h1>|</h1>
+      <a href="/contacts/new"><%= image_tag "2018moji_contact.png" %></a><h1>|</h1>
+      <a href="/gallery"><%= image_tag "2018moji_gallery.png" %></a>
+    </div>
+  </div>
+
+
+  <div id="topics_wrapper">
+    <div class="clear"></div>
+      <div id="topics_box">
+        <ul class="bxslider">
+        <% @topics.each do |obj| %>
+        <li><a href="<%= obj.jump_to %>"><%= image_tag obj.image.tag, class: 'topic_image', :width => '1050' ,:height => '732' %></a></li>
+        <% end %>
+        </ul>
+      </div>
+  </div>
+
+  <div id="news" class="clearfix">
+    <div id="info_news">
+      <div id="info">
+        <%= image_tag "2018infor.png" %>
+      </div>
+      <div class="innews">
+        <% @fresh_infos.each do |obj| %>
+        <p><%= obj.my_date %> <%= obj.main.html_safe %></p>
+        <% end %>
+      </div>
+    </div>
+    <div class="more">
+      <a href="/home/news"><p>もっと見る</p></a>
+    </div>
+  </div>
+
+  <div id="top_about" class="clearfix">
+    <div id="about_text">
+      <h1>プロンティアットVRとは？</h1>
+      <p>プロンティアットVRは，マルチVRゲームの発展を目的とした同志社大学の学生団体です．<br>
+      VRゲームは知っているけどマルチVRゲームって何だろう...<br>
+      そもそもVRをやったことがない!!<br>
+      友達と一緒にVRをやってみたい!!<br>
+      などなど様々な方に向けてマルチVRゲームの良さについて知ってもらうために活動しています．
+      </p>
+    </div>
+    <div id="au_img">
+      <%= image_tag '2018pronti-kun.png' %>
+    </div>
+  </div>
+
+  <div id="link">
+    <div id="home_left">
+      <a href="/home/event"><%= image_tag "2018top_event.png", id:"event" %></a><br>
+      <a href="/games"><%= image_tag "2018top_product.png",  id:"product" %></a><br>
+    </div>
+      <a class="twitter-timeline" data-width="400" data-height="600" data-theme="light" href="https://twitter.com/prontiatvr?ref_src=twsrc%5Etfw">Tweets by prontiatvr</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" id="tweet"></script><br>
+      <div class="clearfix"></div>
+  </div>
+
+
+  <div id="osumaru">
+    <a href="http://www.prontiatvr.com/osusume/top" target="_blank"><%= image_tag "2018osumaru.png" %></a>
+
+  </div>
+
+  <div class="black">
+    <div class="sns">
+      <ul>
+        <li>
+          <a href="https://twitter.com/prontiatvr" target="_blank"><%= image_tag '2018twitter.png', class:'sns_icon' %></a>
+        </li><li>
+          <a href="https://www.facebook.com/prontiat/" target="_blank"><%= image_tag '2018facebook.png', class:'sns_icon' %></a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+
+  <script>
+    // 君とVR フェードイン
+  $('head').append(
+      '<style type="text/css">#top_aaa{opacity: 0;}'
+    );
+    // スライドショー
+    $(document).ready(function(){
+      $('.bxslider').bxSlider({
+  	    auto: true,
+        slideWidth: 1050,
+        minSlides: 1,
+        maxSlides: 1,
+        autoHover: false,
+      });
+    });
+
+
+  </script>
+</div><!--class="pc"のやつ-->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+　　　　　　　　　　　　　　　MOBILE版
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<div class="mobile">
+  <div class="path clearfix">
+    <a href="/home"><%= image_tag "2018pjlogo.png", class:"high_pjlogo" %></a><br>
+    <a href="/home/news"><%= image_tag "news.png" %></a>
+    <a href="/home/event"><%= image_tag "event.png" %></a>
+    <a href="/home/activity"><%= image_tag "activity.png" %></a>
+    <a href="/contacts/new"><%= image_tag "contact.png" %></a>
+  </div>
+
+  <%= image_tag "2018top_img1.png",class:"top_img" %>
+
+  <div class="mobile_info">
+    <%= image_tag "2018infor.png", class:"mobile_index" %>
+    <div class="innews">
+      <% @fresh_infos.each do |obj| %>
+      <table>
+        <tr>
+          <td style="width: 90px;"><%= obj.my_date %></td>
+          <td><%= obj.main.html_safe %></td>
+        </tr>
+      </table>
+      <% end %>
+    </div>
+    <div class="more">
+      <a href="/home/news"><p>もっと見る</p></a>
+    </div>
+  </div>
+
+  <div class="mobile_au">
+    <%= image_tag "2018about.png", class:"mobile_index" %>
+    <p><strong>プロンティアットVRとは？</strong></p>
+    <p>プロンティアットVRは，マルチVRゲームの発展を目的とした同志社大学の学生団体です．<br>
+    VRゲームは知っているけどマルチVRゲームって何だろう...<br>
+    そもそもVRをやったことがない!!<br>
+    友達と一緒にVRをやってみたい!!<br>
+    などなど様々な方に向けてマルチVRゲームの良さについて知ってもらうために活動しています．
+    </p>
+  </div>
+
+  <div class="mobile_links">
+    <%= image_tag "2018links.png", class:"mobile_index" %>
+    <a href="/clover"><%= image_tag "2018festival_top3.png" %></a>
+    <a href="/hackathon_a"><%= image_tag "2018festival_co2.png" %></a>
+    <a href="/hackathon_b"><%= image_tag "2018festival_macw.png" %></a>
+    <a href="http://www.prontiatvr.com/osusume/top" target="_blank"><%= image_tag "2018osumaru2.png" %></a>
+
+  </div>
+
+  <div class="sns">
+    <a href="https://twitter.com/prontiatvr" target="_blank"><%= image_tag '2018twitter.png', class:'sns_icon' %></a>
+    <a href="https://www.facebook.com/prontiat/" target="_blank"><%= image_tag '2018facebook.png', class:'sns_icon' %></a>
+  </div>
+
+</div><!--class="mobile"のやつ-->
+
+<footer>
+  <div class="clearfix">
+    <a href="/home">
+      <%= image_tag '2018pjlogo.png' %>
+    </a>
+    <p>Copyright © プロンティアットVR <br>All Rights Reserved.</p>
+  </div>
+</footer>
+</div>

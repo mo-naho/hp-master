@@ -1,0 +1,82 @@
+// Place all the styles related to the hackathon controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*------------------------------------
+　ハッカソン
+--------------------------------------*/
+#hackathon_area {
+  margin: 80px auto;
+  padding: 10px;
+  width: 850px;
+}
+#hackathon_area h1 {
+  text-align: center;
+}
+#hackathon_area h4 {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 80px;
+}
+#hackathon_area h2 {
+  margin-top: 60px;
+  border-bottom: 2px solid rgb(0,107,181);
+}
+#hackathon_area p,
+#hackathon_area li,
+#hackathon_area h3 {
+  font-size: 1.1em;
+}
+
+#detail h3 {
+  font-size: 1.5em;
+  margin: 0;
+}
+#detail h4 {
+
+}
+#detail p {
+  font-size: 1.05em;
+  margin: 10px;
+}
+
+/*---- ワークショップ申請ボタン -----*/
+#ws_apply {
+  display: block;
+  width: 260px;
+  height: 65px;
+  margin: 90px auto 100px;
+  text-decoration: none;
+  background-color: rgb(59,187,250);
+  /*background: linear-gradient(#3bbbfa, #04a0ec);*/
+  text-align: center;
+  line-height: 65px;
+  font-size: 22px;
+  color: white;
+  border-radius: 13px;
+}
+#ws_apply:hover {
+  background-color: #016bd5;
+}
+/*---- ハッカソン申請ボタン -----*/
+#hack_apply {
+  display: block;
+  width: 300px;
+  height: 65px;
+  margin: 20px auto 50px;
+  text-decoration: none;
+  background-color: #01d50a;
+  text-align: center;
+  line-height: 65px;
+  font-size: 22px;
+  color: white;
+  border-radius: 13px;
+}
+#hack_apply:hover {
+  background-color: #3eb443;
+}
+
+#for_events {
+  color: blue;
+}

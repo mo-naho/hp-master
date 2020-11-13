@@ -1,0 +1,24 @@
+<div class="body">
+<h1>カテゴリ設定</h1>
+
+<p><a href="/categories/new">新カテゴリの追加</a></p>
+
+<table>
+    <tr>
+        <th>カテゴリ</th><th>画像ID</th><th>画像</th><th>編集</th><th>削除</th>
+    </tr>
+    <% @categories.each do |obj| %>
+    <tr>
+        <td><%= obj.name %></td>
+        <td><%= obj.image_id %></td>
+        <td><%= image_tag obj.image.tag, :width => '130' %></td>
+        <td><a href="/categories/<%= obj.id %>/edit">編集</a></td>
+        <td><%= link_to '削除', obj, method: :delete, data: { confirm: 'このデータを削除しますか?' } %></td>
+    </tr>
+    <% end %>
+</table>
+
+<p><a href="/admin">管理者トップへ</a></p>
+<p><a href="/images">画像設定へ</a></p>
+<%=link_to 'サインアウト', destroy_account_session_path, method: :delete %>
+</div>

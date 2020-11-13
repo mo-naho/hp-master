@@ -1,0 +1,33 @@
+<div class="body">
+<h1>ニュース設定</h1>
+<p>編集</p>
+<% if @info.errors.any? %>
+<ul>
+    <% @info.errors.full_messages.each do |err| %>
+        <li><%= err %></li>
+    <% end %>
+</ul>
+<% end %>
+<table>
+    <%= form_for @info,:url => {:action => :update} do |form| %>
+    <tr><th>ニュース内容</th>
+        <td><%= form.text_field :main %></td></tr>
+    <tr><th>投稿日時</th>
+        <td><%= raw sprintf(form.datetime_select(
+								:my_date,
+								use_month_numbers: true,
+								start_year:        Time.now.year,
+								end_year:          Time.now.year+1,
+								date_separator: '%s',
+								datetime_separator: '%s',
+								time_separator: '%s'),
+						'年 ', '月 ', '日','時') + '分' %></td></tr>
+    <tr><th>カテゴリID</th>
+        <td><%= form.collection_select :category_id, Category.all, :id, :name, include_blank: '選択してください' %></td></tr>
+    <tr><th></th>
+        <td><%= form.submit "送信" %></td></tr>
+    <% end %>
+</table>
+
+<p><a href="/admin">戻る</a></p>
+</div>

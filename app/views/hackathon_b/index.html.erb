@@ -1,0 +1,194 @@
+
+<script src="http://2chan-matome.publog.jp/rotate/jQueryRotateCompressed.js"></script>
+<div class="body">
+
+
+<div id ="b_header">
+    <a href="/home"><%= image_tag "2018pjlogo.png", id:"b_rogo" %></a>
+</div>
+
+<div id ="b_title">
+    <h1>ハッカソンB班作成　「Make A Clean World」</h1>
+</div>
+
+<div id ="b_top">
+    <%= image_tag "B_start.png", id:"b_start" %>
+</div>
+
+<div id ="b_text">
+    <h1>About</h1>
+    <p>このゲーム「Make A Clean World 」は地球温暖化による海面上昇によって沈没した都市が舞台です。</p>
+    <p>このゲームではその名の通り流れてくるゴミを狙撃することによってゴミを撲滅して海をきれいにしようというシューティングゲームです。</p>
+    <p>ゲームを始めたあなたは潜水艦に乗りその進む道は潜水艦に委ねられています。
+    <p>滅んだ都市を探検しながらごみのないきれいな海にしましょう。</p>
+</div>
+
+<div id ="b_table">
+    <table>
+        <tr>
+            <th>
+            <%= image_tag "B_ss2.png", id:"b_ss2" %>
+            </th>
+            <th>
+                <%= image_tag "yajirusi.png", id:"yajirusi" %>
+            </th>
+            <th>
+            <%= image_tag "B_ss3.png", id:"b_ss3" %>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                汚れた海を
+            </th>
+            <th>
+            </th>
+            <th>
+                きれいに！！
+            </th>
+    <table>
+</div>
+
+<div id="b_pronti">
+    <%= image_tag "2018pronti-kun1.png", id:"b_prontikun" %>
+    <div id="b_serif">
+        <div id="b_serif1">
+            <p>こんにちは！</p>
+            <p>僕はプロンティ君と呼ばれているよ！</p>
+        </div>
+        <div id="b_serif2">
+            <p>プロンティアットVRの公式キャラクターです！</p>
+            <p>　　</p>
+        </div>
+        <div id="b_serif3">
+            <a href="https://twitter.com/prontiatvr"><p>Twitterもやってるよ！</p>
+            <p>良かったらフォローしてね！(ここをクリック！)</p></a>
+        </div>
+        <div id="b_serif4">
+            <p>実はもう一人仲間がいるよ...！！</p>
+            <p>名前はおこじくんっていうんだー</p>
+        </div>
+
+    </div>
+</div>
+
+<div id = "b_foot">
+
+    <div id="url">
+    <p></p>
+    <%= link_to 'プロンティアットVR公式ホームページ',"/home", :style => "color: white;" %>
+    <p></p>
+    <%= link_to 'ハッカソンA班ホームページ', "/hackathon_a/index", :style => "color: white;" %>
+    </div>
+</div>
+
+
+
+
+    <p>©ProntiatVR</p>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $(function() {
+        $("#b_serif2").hide();
+        $("#b_serif3").hide();
+        $("#b_serif4").hide();
+
+        window.sr = ScrollReveal();
+        sr.reveal('#b_top', {rotate:{x: 0, y: 180, z: 0},duration: 2000, scale: 0.5});
+        sr.reveal('#b_ss2', {viewFactor:0.5});
+        sr.reveal('#b_ss3', {viewFactor:0.5});
+    });
+
+    $("#yajirusi").rotate({
+        bind:
+        {
+            mouseover: function(){
+            $(this).rotate({ angle:0,animateTo:360,easing: $.easing.easeInOutExpo })
+            }
+        }
+    });
+    var i = 0;
+
+    var flag =0;
+
+    $('#b_prontikun').click(function() {
+        var random1 = Math.floor( Math.random() * 4 );
+
+        var random2 = Math.floor( Math.random() * 5 );
+
+        switch(random2){
+            case 0:
+                $(this).addClass("animated bounce");
+                $('#b_prontikun').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                    $(this).removeClass('animated bounce');
+                });
+                break;
+
+            case 1:
+                $(this).addClass("animated flash");
+                $('#b_prontikun').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                    $(this).removeClass('animated flash');
+                });
+                break;
+
+            case 2:
+                $(this).addClass("animated pulse");
+                $('#b_prontikun').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                    $(this).removeClass('animated pulse');
+                });
+                break;
+
+            case 3:
+                    $(this).addClass("animated shake");
+                    $('#b_prontikun').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                        $(this).removeClass('animated shake');
+                    });
+                    break;
+
+             case 4:
+                    $(this).addClass("animated hinge");
+                    $('#b_prontikun').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                        $(this).removeClass('animated hinge');
+                    });
+                    break;
+            }
+
+
+
+        if(flag==random1){
+            random1++;
+            random1 = random1%4
+        }
+
+        if(random1 ==0){
+            $("#b_serif2").hide();
+            $("#b_serif3").hide();
+            $("#b_serif4").hide();
+            $("#b_serif1").show();
+            flag = 0;
+        }else if(random1 ==1){
+            $("#b_serif1").hide();
+            $("#b_serif3").hide();
+            $("#b_serif4").hide();
+            $("#b_serif2").show();
+            flag = 1;
+        }else if(random1 ==2){
+            $("#b_serif1").hide();
+            $("#b_serif2").hide();
+            $("#b_serif4").hide();
+            $("#b_serif3").show();
+            flag = 2;
+        }else if(random1 ==3){
+            $("#b_serif1").hide();
+            $("#b_serif2").hide();
+            $("#b_serif3").hide();
+            $("#b_serif4").show();
+            flag = 3;
+        }
+    });
+    })
+
+
+</script>

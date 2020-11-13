@@ -1,0 +1,71 @@
+//全体///////////////////////////////////////////////
+.gallery{
+    text-align: center;
+  }
+  .gallery img{
+    width: 50%;
+  }
+  .gallery_header, .poster h1, .creats h1, .charactor h1{
+    border: 2px solid rgba(0, 0, 0, 0);
+    padding: 20px 0;
+    margin: 0;
+  }
+  .gallery_header, .poster h1, .creats h1, .charactor h1{
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+  .black_letter{
+    color: black;
+  }
+  
+  
+  //poster///////////////////////////////////////////
+  div.poster_img{
+    width: 40%;
+    float: left;
+    margin-bottom: 70px;
+  }
+  div.poster_img:nth-child(3n-1){//左の画像
+    margin-left: 10%;
+    // background-color: red;
+  }
+  div.poster_img:nth-child(3n){//右の画像
+    margin-right: 10%;
+    // background-color: white;
+  }
+  .poster_img img{
+    width: 80%;
+  }
+  
+  
+  //creats///////////////////////////////////////////
+  .creats_item{
+    width: 40%;
+    float: left;
+    margin: 40px 5% 40px;
+  }
+  .creats_item img{
+    width: 100%;
+    border: 10px solid white;
+    border-radius: 0.7em;
+  }
+  
+  
+  //charactor////////////////////////////////////////
+  .charactor{
+    margin: 50px auto;
+  }
+  div.gallery_chara{
+    width: 40%;
+    margin: auto;
+    float: left;
+  }
+  div.gallery_chara:nth-child(2){
+    margin: 0 1% 0 9%;
+  }
+  div.gallery_chara:nth-child(3){
+    margin: 0 9% 0 1%;
+  }
+  .gallery_chara img{
+    width: 80%;
+  }
+  

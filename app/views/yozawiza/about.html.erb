@@ -1,0 +1,94 @@
+<% provide(:title, "ABOUT") %>
+
+<header id="y_header">
+  <p><a href="/home">ProntiatVR</a></p>
+  <div id="sns_wrapper">
+    <div class="fb-share-button" data-href="http://prontiatvr.com/yozawiza/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fprontiatvr.com%2Fyozawiza%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">シェア</a></div>
+    <div class="fb-share-button"><a href="http://twitter.com/share?url=http://prontiatvr.com/yozawiza/&text=VRゲーム｢夜桜ウィザード｣公式サイト&hashtags=yozawiza,夜桜ウィザード,YozakuraWizard,Steam,UE4" target="_blank"><%= image_tag "tweet.png" %></a></div>
+  </div>
+</header>
+
+<div id="about_main">
+  <%= image_tag 'about_img.png', id: "about_img" %>
+  <div id="about_box">
+    <div id="box_title">
+      <%= image_tag 'about.png' %>
+    </div>
+    <p>
+      古来に存在せし和の世界。<br>
+      妖怪達に支配されたこの世界を救えるのは、<br>
+      プレイヤーである貴方ただ一人。<br>
+      <span style="line-height:150pt">その名も───「夜桜ウィザード」<br></span>
+      京都を舞台とした秀麗な和の世界で<br>
+      刀、御札、弓などの多様な武器を自在に使い、<br>
+      妖怪達を華麗に退治せよ！      
+    </p>
+    <p id="mini">
+      夜桜ウィザードは日本の陰陽師をテーマとした<br>
+      VR和風ステルスアクションゲーム。<br>
+      「2017年度日本ゲーム大賞」アマチュア部門最終選考進出作品「怨挟師」が<br>
+      面白くなってSteamに登場！<br>
+      EPIC GAMESのUNREAL DEV GRANTSに採用されました！<br>
+    </p>
+  </div>
+  <div id="yoza_back">
+    <div id="wrapper_yoza_menu">
+      <a href="/yozawiza" class="yoza_button"><%= image_tag 'top.png', id: 'top' %></a>
+      <a href="/yozawiza/about" class="yoza_button"><%= image_tag 'about_yellow.png', id: 'about' %></a>
+      <a href="/yozawiza/system" class="yoza_button"><%= image_tag 'system.png', id: 'system' %></a>
+      <a href="/yozawiza/spec" class="yoza_button"><%= image_tag 'spec.png', id: 'spec' %></a>
+      <a href="/yozawiza/movie" class="yoza_button"><%= image_tag 'movie.png', id: 'movie' %></a>
+    </div>
+    <div id="clear"></div>
+	</div>
+</div>  
+
+<div id="about_footer">
+  <div id="f_pronti">
+    <p>
+      <a href="/home">◀プロンティアットVR　公式HP</a>
+    </p>
+  </div>
+  <div id="clear"></div>
+    <div id="f_text">
+      <p>
+        ©2018 ProntiatVR
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+//facebookのボタン
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.12';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+ //マウスオーバーでアイコン変わる
+  $(document).ready(function(){ 
+    $("img#top").mouseover(function(){
+      $(this).attr("src","<%= asset_path 'top_red.png' %>").attr("alt","top_on")
+    }).mouseout(function(){
+      $(this).attr("src","<%= asset_path 'top.png' %>").attr("alt","top")
+    });
+    $("img#system").mouseover(function(){
+      $(this).attr("src","<%= asset_path 'system_red.png' %>").attr("alt","system_on")
+    }).mouseout(function(){
+      $(this).attr("src","<%= asset_path 'system.png' %>").attr("alt","system")
+    });
+    $("img#spec").mouseover(function(){
+      $(this).attr("src","<%= asset_path 'spec_red.png' %>").attr("alt","spec_on")
+    }).mouseout(function(){
+      $(this).attr("src","<%= asset_path 'spec.png' %>").attr("alt","spec")
+    });
+    $("img#movie").mouseover(function(){
+      $(this).attr("src","<%= asset_path 'movie_red.png' %>").attr("alt","movie_on")
+    }).mouseout(function(){
+      $(this).attr("src","<%= asset_path 'movie.png' %>").attr("alt","movie")
+    });
+  });
+</script>

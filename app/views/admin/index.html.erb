@@ -1,0 +1,91 @@
+<div class="body">
+<h1>HP管理画面</h1>
+<h2>ニュース一覧</h2><p>
+<div class="add"><a href="/admin/new">新ニュースの追加</a>
+</div></p>
+
+<div class="index">
+  <table>
+      <tr>
+          <th>ニュース</th><th>投稿日時</th><th>カテゴリID</th><th>画像</th><th>編集</th><!--<th>削除</th>-->
+      </tr>
+      <% @infos.each do |obj| %>
+      <tr>
+          <td><%= obj.main %></td>
+          <td><%= obj.my_date %></td>
+          <td><%= obj.category.name %></td>
+          <td><%= image_tag obj.category.image.tag, :width => '130' %></td>
+          <td><a href="/admin/<%= obj.id %>/edit">編集</a></td>
+          <!--<td><%= link_to '',"", method: :delete, data: { confirm: '本当に削除しますか?' } %></td>-->
+      </tr>
+      <% end %>
+  </table>
+</div>
+
+
+<h2>トピック一覧</h2><p>
+<div class="add"><a href="/topics/new">トピックの追加</a>
+</div></p>
+
+<div class="index">
+  <table>
+      <tr>
+          <th>画像ID</th><th>画像</th><th>リンク先のURL</th><th>説明</th><th>編集</th><th>削除</th>
+      </tr>
+      <% @topics.each do |obj| %>
+      <tr>
+          <td><%= obj.image_id %></td>
+          <td><%= image_tag obj.image.tag, :width => '130' %></td>
+          <td><%= obj.jump_to %></td>
+          <td><%= obj.memo %></td>
+          <td><a href="/topics/<%= obj.id %>/edit">編集</a></td>
+          <td><%= link_to '削除', obj , method: :delete, data: { confirm: '本当に削除しますか?' } %></td>
+      </tr>
+      <% end %>
+  </table>
+</div>
+
+
+<h2>イベント一覧</h2><p>
+<div class="add"><a href="/events/new">イベントの追加</a>
+</div></p>
+
+<div class="index">
+  <table>
+      <tr>
+          <th>イベント名</th><th>イベントの開催日</th><th>リンク先のURL</th><th>編集</th><th>削除</th>
+      </tr>
+      <% @events.each do |obj| %>
+      <tr>
+          <td><%= obj.event_name %></td>
+          <td><%= obj.event_date %></td>
+          <td><%= obj.jump_to %></td>
+          <td><a href="/events/<%= obj.id %>/edit">編集</a></td>
+          <td><%= link_to '削除', obj , method: :delete,  data: { confirm: '本当に削除しますか?' }  %></td>
+      </tr>
+      <% end %>
+  </table>
+</div>
+
+
+<h2>お問い合わせ一覧</h2>
+<div class="index">
+  <table>
+      <tr>
+          <th>名前</th><th>メールアドレス</th><th>お問い合わせ内容</th>
+      </tr>
+      <% @contacts.each do |obj| %>
+      <tr>
+          <td><%= obj.name %></td>
+          <td><%= obj.mail %></td>
+          <td><%= obj.main %></td>
+      </tr>
+      <% end %>
+  </table>
+</div>
+
+
+<div id="under"><p><a href="/images">画像設定へ</a></p>
+<p><a href="/categories">カテゴリ設定へ</a></p></div>
+<div id="signout"><%=link_to 'サインアウト', destroy_account_session_path, method: :delete, :style => "color: white;" %></div>
+</div>

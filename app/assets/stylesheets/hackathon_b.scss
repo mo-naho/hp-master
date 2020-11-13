@@ -1,0 +1,82 @@
+// Place all the styles related to the hackathonB controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#b_header{
+    background-color: black;
+    height: 40px;
+    padding: 13px 50px;
+
+}
+
+#b_rogo{
+    width: 200px;
+    
+}
+#b_title{
+    text-align: center;
+    
+}
+
+#b_top{
+    width: 1050px;
+    max-width: 100%;
+    margin: 10px auto 20px;
+}
+
+#b_start{
+    width: 100%;
+  display: block;
+  
+}
+
+#b_text{
+    text-align: center;
+}
+
+#b_ss2{
+    width: 500px;
+    max-width: 100%;
+    margin: 10px auto 20px;
+    display: block;
+}
+
+#b_ss3{
+    width: 500px;
+    max-width: 100%;
+    margin: 10px auto 20px;
+    display: block;
+}
+
+#b_table table{
+    text-align: center;
+    margin: auto;
+}
+
+#yajirusi{
+    width: 100px;
+}
+
+#b_prontikun{
+    width: 500px;
+    max-width: 100%;
+    margin: 10px auto 20px;
+    display: block;
+    margin-bottom: -40px;
+}
+
+#b_prontikun p {
+    text-align: center;
+    font-size: 20px;
+    color:white;
+	margin: 0;
+	padding: 0;
+}
+
+#b_serif {
+    margin: auto;
+    width: 550px;
+    background-color:rgb(0, 0, 0);
+    border-radius: 1em;
+}
+
+

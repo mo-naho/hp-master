@@ -1,0 +1,23 @@
+<% if topic.errors.any? %>
+<div class="error_explanation">
+  <h3><%= topic.errors.count %> 件のエラー</h3>
+  <ul>
+    <% topic.errors.full_messages.each do |err| %>
+        <li><%= err %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<%= form_for topic do |form| %>
+<table>
+    <tr><th>画像ID</th>
+        <td><%= form.text_field :image_id %></td></tr>
+    <tr><th>リンク先のURL</th>
+        <td><%= form.text_field :jump_to %></td></tr>
+    <tr><th>説明</th>
+        <td><%= form.text_field :memo %></td></tr>
+    <tr><th></th>
+        <td><%= form.submit "送信" %></td></tr>
+</table>
+<% end %>

@@ -1,0 +1,112 @@
+<div class="body">
+<% provide(:title, "コンタクト") %>
+<div class="pc">
+  <div class="path clearfix">
+    <a href="/home"><%= image_tag "2018pjlogo.png", class:"high_pjlogo" %></a>
+    <div class="menu">
+      <a href="/home/news"><%= image_tag "2018moji_news.png" %></a><h1>|</h1>
+      <a href="/home/event"><%= image_tag "2018moji_event.png" %></a><h1>|</h1>
+      <a href="/home/activity"><%= image_tag "2018moji_activity.png" %></a><h1>|</h1>
+      <a href="/contacts/new"><%= image_tag "2018moji_contact.png" %></a><h1>|</h1>
+      <a href="/gallery"><%= image_tag "2018moji_gallery.png" %></a>
+    </div>
+  </div>
+
+  <div id="contact_area">
+    <h1>お問い合わせ</h1>
+
+    <% if @contact.errors.any? %>
+    <div class="error_explanation">
+      <h3><%= @contact.errors.count %> 件のエラー</h3>
+      <ul>
+        <% @contact.errors.full_messages.each do |err| %>
+            <li><%= err %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+
+    <%= form_for @contact do |form| %>
+    <table id="contact_table">
+        <tr><th>お名前</th>
+            <td><%= form.text_field :name %></td></tr>
+        <tr><th>メールアドレス</th>
+            <td><%= form.text_field :mail %></td></tr>
+        <tr><th>お問い合わせ内容</th>
+            <td><%= form.text_area :main, {cols:40, rows:10} %></td></tr>
+    </table>
+    <%= form.submit "送信" %>
+    <% end %>
+  </div>
+
+  <div id="access_area">
+    <h3>活動場所</h3>
+    <p>〒610-0394<br>京都府京田辺市多々羅都谷1-3<br>同志社大学ローム記念館2F</p>
+    <p>学校法人同志社<br>同志社ローム記念館事務室（プロンティアットVR PJ）</p>
+    <br>
+    <h3>アクセス</h3>
+    <p>JR学研都市線「同志社前駅」徒歩10分</p>
+    <p>近鉄京都線「興戸駅」徒歩15分</p>
+  </div>
+</div>
+
+<div class="mobile">
+  <div class="path clearfix">
+    <a href="/home"><%= image_tag "2018pjlogo.png", class:"high_pjlogo" %></a><br>
+    <a href="/home/news"><%= image_tag "news.png" %></a>
+    <a href="/home/event"><%= image_tag "event.png" %></a>
+    <a href="/home/activity"><%= image_tag "activity.png" %></a>
+    <a href="/contacts/new"><%= image_tag "contact.png" %></a>
+  </div>
+
+  <div class="mobile_contact">
+    <h1>お問い合わせ</h1>
+
+    <% if @contact.errors.any? %>
+    <div class="error_explanation">
+      <h3><%= @contact.errors.count %> 件のエラー</h3>
+      <ul>
+        <% @contact.errors.full_messages.each do |err| %>
+            <li><%= err %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+
+    <%= form_for @contact do |form| %>
+    <div class="mobile_contact_form">
+      <p><strong>お名前</strong><br>
+      <%= form.text_field :name %></p>
+      <p><strong>メールアドレス</strong><br>
+      <%= form.text_field :mail %></p>
+      <p><strong>お問い合わせ内容</strong><br>
+      <%= form.text_area :main, {cols:40, rows:10} %></p>
+    </div>
+    <%= form.submit "送信" %>
+    <% end %>
+
+    <br><br>
+
+    <h3>活動場所</h3>
+    <p>〒610-0394<br>京都府京田辺市多々羅都谷1-3<br>同志社大学ローム記念館2F</p>
+    <p>学校法人同志社<br>
+      同志社ローム記念館事務室<br>
+      （プロンティアットVR PJ）</p>
+    <br>
+    <h3>アクセス</h3>
+    <p>JR学研都市線「同志社前駅」徒歩10分</p>
+    <p>近鉄京都線「興戸駅」徒歩15分</p>
+
+  </div>
+</div>
+
+
+<footer>
+  <div class="clearfix">
+    <a href="/home">
+      <%= image_tag '2018pjlogo.png' %>
+    </a>
+    <p>Copyright © プロンティアットVR <br>All Rights Reserved.</p>
+  </div>
+</footer>
+</div>

@@ -1,0 +1,23 @@
+<div class="body">
+<h1>カテゴリの画像設定</h1>
+
+<p><a href="/images/new">新しい画像をアップロード</a></p>
+
+<table id="imgtable">
+    <tr>
+        <th>ID</th><th>画像</th><th>タグ</th><th>削除</th>
+    </tr>
+    <% @images.each do |obj| %>
+    <tr>
+      <td><%= obj.id %></td>
+      <td><%= image_tag obj.tag.to_s, :width => '130' %></td>
+      <td>&lt;img src="<%= obj.tag %>"&gt;</td>
+      <td><%= link_to '削除', obj, method: :delete, data: { confirm: '本当に削除しますか?' } %></td>
+    </tr>
+    <% end %>
+</table>
+
+<p><a href="/admin">管理者トップへ</a></p>
+<p><a href="/categories">カテゴリ設定へ</a></p>
+<%=link_to 'サインアウト', destroy_account_session_path, method: :delete %>
+</div>

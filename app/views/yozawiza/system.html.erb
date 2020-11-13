@@ -1,0 +1,238 @@
+<% provide(:title, "SYSTEM") %>
+
+<header id="y_header">
+  <p><a href="/home">ProntiatVR</a></p>
+  <div id="sns_wrapper">
+    <div class="fb-share-button" data-href="http://prontiatvr.com/yozawiza/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fprontiatvr.com%2Fyozawiza%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">シェア</a></div>
+    <div class="fb-share-button"><a href="http://twitter.com/share?url=http://prontiatvr.com/yozawiza/&text=VRゲーム｢夜桜ウィザード｣公式サイト&hashtags=yozawiza,夜桜ウィザード,YozakuraWizard,Steam,UE4" target="_blank"><%= image_tag "tweet.png" %></a></div>
+  </div>
+</header>
+
+<div id="system_main">
+  <%= image_tag 'system_img.png', id: "system_img" %>
+  <div id="system_box">
+    <div id="box_title">
+    　<%= image_tag 'system.png' %>
+    </div>　　
+
+    <div id="kihon">
+      <p>▷攻撃方法</p>
+      <p>
+        基本攻撃はお札である。
+        また、武器を用いて攻撃ができる。<br>
+        プレイヤーは自分の背中、胸、右腰、左腰の4箇所から武器を装備し、<br>
+        胸以外の3箇所から武器の装備を変更できる。
+      </p>
+    </div>
+    <div id="img_wrapper">
+      <div class="img">
+        <div id="amulet" class="modal">
+          <p>
+            御札：中距離武器、制限なし<br>
+　          胸にコントローラーを持った手を近づけ、<a href="/assets/grab.png"><u>グラブボタン</u></a>を
+            押すことで”御札”を取り出し、フリスビーを投げるような動作でグラブボタンを離すと妖怪に向かって飛び、
+            妖怪に当たるとダメージを与えることができる。
+          </p>
+        </div>
+        <!-- Link to open the modal -->
+        <p><a href="#amulet" rel="modal:open"><%= image_tag 'amulet.jpg' %>御札</a></p>
+      </div>
+      <div class="img">
+        <div id="sword" class="modal">
+          <p>
+            刀：近距離武器、制限あり（使用し続けると消失する）<br>
+            刀の装備箇所を（または刀の持ち手）を<a href="/assets/grab.png"><u>グラブボタン</u></a>で握り、
+            剣を振るうように扱うことで妖怪にダメージを与えることができる。
+          </p>
+       </div>
+      <!-- Link to open the modal -->
+      <p><a href="#sword" rel="modal:open"><%= image_tag 'sword.jpg' %>刀</a></p>
+    </div>
+  </div>
+  <div class="clear"></div>
+
+  <div id="img_wrapper">
+    <div class="img">
+      <div id="bow" class="modal">
+        <p>
+          弓矢：長距離武器、制限あり（矢の数）<br>
+          基本利き手ではない方の<a href="/assets/grab.png"><u>グラブボタン</u></a>で弓の装備箇所を（または弓）を握り、
+          もう片方の<a href="/assets/grab.png"><u>グラブボタン</u></a>で弓を引くような動作を行うと、
+          ポインターと矢の軌道が現れ、弓を握っていない方の<a href="/assets/grab.png"><u>グラブボタン</u></a>を離すと、
+          矢を放つことができる。
+        </p>
+      </div>
+      <!-- Link to open the modal -->
+      <p><a href="#kunai" rel="modal:open"><%= image_tag 'bow.jpg' %>弓矢</a></p>
+    </div>
+    <div class="img">
+      <div id="kunai" class="modal">
+        <p>
+          クナイ：中距離武器、制限なし<br>
+　        クナイの装備箇所（またはクナイの持ち手）を<a href="/assets/grab.png"><u>グラブボタン</u></a>で握り、
+          ダーツを打つような仕草で<a href="/assets/grab.png"><u>グラブボタン</u></a>を
+          離すとクナイを放つことができる。
+        </p>
+      </div>
+      <!-- Link to open the modal -->
+      <p><a href="#kunai" rel="modal:open"><%= image_tag 'kunai.png' %>クナイ</a></p>
+    </div>
+  </div>
+  <div class="clear"></div>
+
+  <div id="img_wrapper">
+    <div class="img">
+      <div id="bomb" class="modal">
+        <p>
+          爆弾：近距離武器、制限なし<br>
+　        爆弾の装備箇所を<a href="/assets/grab.png"><u>グラブボタン</u></a>で握ると、
+          爆弾が着火された状態で取り出すことができ、ボールを投げるような仕草で
+          <a href="/assets/grab.png"><u>グラブボタン</u></a>を離すと爆弾が投げられ、一定時間後爆発する。
+        </p>
+      </div>
+      <!-- Link to open the modal -->
+      <p><a href="#bomb" rel="modal:open"><%= image_tag 'bomb.png' %>爆弾</a></p>
+    </div>
+    <div class="img">
+      <div id="equipped" class="modal">
+        <p>
+          ガード:<br>
+          右手であればAボタン、左手であればXボタンを押すと、妖怪の攻撃を無効化するシールドが発生し、
+          シールドを盾のように扱うことで妖怪の攻撃から身を守ることができる。</p>
+      </div>
+      <!-- Link to open the modal -->
+      <p><a href="#equipped" rel="modal:open"><%= image_tag 'equipped.png' %>ガード</a></p>
+    </div>
+  </div>
+  <div class="clear"></div>
+
+  <div id="wizard">
+    <p>▷ウィザード</p>
+    <p>
+      プレイヤーは封じた妖を武器へと変える能力「ウィザード」の力を有している。<br>
+      この力を使って瀕死状態の妖を封印し、武器を手に入れ戦おう！
+    </p>
+  </div>
+  <div id="img_wrapper">
+    <div class="img">
+      <div id="sealed" class="modal">
+        <p>
+          封印：<br>
+          御札を持った状態で、<a href="/assets/trigger.png"><u>トリガーボタン</u></a>を長押しすると御札が封印用の札に変わる。
+          その御札を瀕死状態（攻撃行動を行わなくなり、妖怪の体が青い炎に包まれる）の妖怪に投げることで妖怪にとどめを刺し、
+          一体の妖怪から一つ、武器を手に入れることができる。
+        </p>
+      </div>
+      <!-- Link to open the modal -->
+      <p><a href="#sealed" rel="modal:open"><%= image_tag 'sealed.jpg' %>封印</a></p>
+    </div>
+    <div class="img">
+    <div id="soubi" class="modal">
+      <p>
+        装備:<br>
+        プレイヤーは封印によって入手した武器を装備することが可能である。
+        その武器を持った際、持っていない方の手の甲に注目すると、人型のアイコンが現れる。
+        そのアイコンにある左右の魔法陣はプレイヤーから見て、右の魔方陣は右の腰に、
+        また左であればプレイヤーの左の腰から取り出せる武器に対応している。
+        その魔法陣の左右のどちらかに持っている武器を当て、離すとプレイヤーの腰に装備していた武器が更新される。
+      </p>
+    </div>
+    <!-- Link to open the modal -->
+    <p><a href="#soubi" rel="modal:open"><%= image_tag 'soubi.png' %>装備</a></p>
+    </div>
+  </div>
+  <div class="clear"></div>
+  
+  <div id="wizard">
+    <p>▷マルチプレイモード</p>
+    <p>
+      2人のプレイヤーで遊ぶことができるシステムである。<br>
+      VR機器を装着するプレイヤー1と違い、<br>プレイヤー2はVR機器を装着せず、パソコンでプレイする。<br>
+      妖怪退治を行う主人公であるプレイヤー１は「式神」を使役している。<br>
+      その式神となって援護をするのがプレイヤー２である。      
+    </p>
+  </div>
+  
+  <div id="img_wrapper">
+    <div class="img">
+      <div id="multi" class="modal">
+        <p>
+          プレイヤー2の操作:<br>
+          ・移動<br>
+        　「W」を押すと前進、「A」を押すと左に移動、「S」を押すと右に移動、「D」を押すと後ろに後退する。
+          また「M」を押すことで、プレイヤー１の元へ瞬間移動をすることができる。<br>
+          ・攻撃<br>
+　        プレイヤー２は妖怪に対して遠距離の射撃攻撃を行うことができる。キーボードの「スペースキー」を押すと、
+         吹き矢が発射され、妖怪に当てると数秒動きを止める効果を妖怪に与えることができる。
+        </p>
+      </div>
+      <!-- Link to open the modal -->
+      <p><a href="#multi" rel="modal:open"><%= image_tag 'multi.png' %>プレイヤー2の操作</a></p>
+    </div>
+    <div class="img">
+      <a href="http://store.steampowered.com/app/790780/Yozakura_Wizard_VR/"><%= image_tag "steam.png", id:"steam" %></a>
+    </div>
+  </div>
+  <div class="clear"></div>
+  </div>
+    
+  <div id="yoza_back">
+    <div id="wrapper_yoza_menu">
+      <a href="/yozawiza" class="yoza_button"><%= image_tag 'top.png', id: 'top' %></a>
+      <a href="/yozawiza/about" class="yoza_button"><%= image_tag 'about.png', id: 'about' %></a>
+      <a href="/yozawiza/system" class="yoza_button"><%= image_tag 'system_yellow.png', id: 'system' %></a>
+      <a href="/yozawiza/spec" class="yoza_button"><%= image_tag 'spec.png', id: 'spec' %></a>
+      <a href="/yozawiza/movie" class="yoza_button"><%= image_tag 'movie.png', id: 'movie' %></a>
+    </div>
+    <div id="clear"></div>
+  </div>
+</div>  
+
+<div id="system_footer">
+  <div id="f_pronti">
+    <p>
+       <a href="/home">◀プロンティアットVR　公式HP</a>
+     </p>
+  </div>
+   <div id="clear"></div>
+   <div id="f_text">
+    <p>
+	     ©2018 ProntiatVR
+    </p>
+  </div>
+</div>
+
+<script>
+//facebookのボタン
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.12';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+ //マウスオーバーでアイコン変わる
+ $(document).ready(function(){ 
+  $("img#top").mouseover(function(){
+    $(this).attr("src","<%= asset_path 'top_red.png' %>").attr("alt","top_on")
+  }).mouseout(function(){
+    $(this).attr("src","<%= asset_path 'top.png' %>").attr("alt","top")
+  });
+  $("img#about").mouseover(function(){
+    $(this).attr("src","<%= asset_path 'about_red.png' %>").attr("alt","about_on")
+  }).mouseout(function(){
+    $(this).attr("src","<%= asset_path 'about.png' %>").attr("alt","about")
+  });
+  $("img#spec").mouseover(function(){
+    $(this).attr("src","<%= asset_path 'spec_red.png' %>").attr("alt","spec_on")
+  }).mouseout(function(){
+    $(this).attr("src","<%= asset_path 'spec.png' %>").attr("alt","spec")
+  });
+  $("img#movie").mouseover(function(){
+    $(this).attr("src","<%= asset_path 'movie_red.png' %>").attr("alt","movie_on")
+  }).mouseout(function(){
+    $(this).attr("src","<%= asset_path 'movie.png' %>").attr("alt","movie")
+  });
+});
+</script>

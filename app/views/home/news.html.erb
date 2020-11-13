@@ -1,0 +1,58 @@
+<div class="body">
+<div class="pc">
+  <% provide(:title, "ニュース") %>
+
+  <div class="path clearfix">
+    <a href="/home"><%= image_tag "2018pjlogo.png", class:"high_pjlogo" %></a>
+    <div class="menu">
+      <a href="/home/news"><%= image_tag "2018moji_news.png" %></a><h1>|</h1>
+      <a href="/home/event"><%= image_tag "2018moji_event.png" %></a><h1>|</h1>
+      <a href="/home/activity"><%= image_tag "2018moji_activity.png" %></a><h1>|</h1>
+      <a href="/contacts/new"><%= image_tag "2018moji_contact.png" %></a><h1>|</h1>
+      <a href="/gallery"><%= image_tag "2018moji_gallery.png" %></a>
+    </div>
+  </div>
+
+  <div id="news_area">
+    <h1>ニュース</h1>
+    <table id="news_table">
+      <% @infos.each do |obj| %>
+      <tr>
+          <td id="news_ymd" style="width: 100px;"><%= obj.my_date.year %>/<%= obj.my_date.mon %>/<%= obj.my_date.day %></td>
+          <td id="news_text"><%= obj.main.html_safe %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+
+
+<div class="mobile">
+  <div class="path clearfix">
+    <a href="/home"><%= image_tag "2018pjlogo.png", class:"high_pjlogo" %></a><br>
+    <a href="/home/news"><%= image_tag "news.png" %></a>
+    <a href="/home/event"><%= image_tag "event.png" %></a>
+    <a href="/home/activity"><%= image_tag "activity.png" %></a>
+    <a href="/contacts/new"><%= image_tag "contact.png" %></a>
+  </div>
+  <div class="mobile_news">
+    <h1>ニュース</h1>
+    <table>
+      <% @infos.each do |obj| %>
+      <tr><td><%= obj.my_date %></td>
+      <td><%= obj.main.html_safe %></td></tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<footer>
+  <div class="clearfix">
+    <a href="/home">
+      <%= image_tag '2018pjlogo.png' %>
+    </a>
+    <p>Copyright © プロンティアットVR <br>All Rights Reserved.</p>
+  </div>
+</footer>
+</div>

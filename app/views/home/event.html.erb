@@ -1,0 +1,66 @@
+<div class="body">
+<% provide(:title, "イベント") %>
+<div class="pc">
+  <div class="path clearfix">
+    <a href="/home"><%= image_tag "2018pjlogo.png", class:"high_pjlogo" %></a>
+    <div class="menu">
+      <a href="/home/news"><%= image_tag "2018moji_news.png" %></a><h1>|</h1>
+      <a href="/home/event"><%= image_tag "2018moji_event.png" %></a><h1>|</h1>
+      <a href="/home/activity"><%= image_tag "2018moji_activity.png" %></a><h1>|</h1>
+      <a href="/contacts/new"><%= image_tag "2018moji_contact.png" %></a><h1>|</h1>
+      <a href="/gallery"><%= image_tag "2018moji_gallery.png" %></a>
+    </div>
+  </div>
+
+  <div id="event_area">
+    <h1>イベント</h1>
+    <table id="event_table">
+      <% @events.each do |obj| %>
+      <tr>
+          <td><%= obj.event_date %></td>
+          <% if obj.jump_to.length > 1 %>
+            <td><a href="<%= obj.jump_to %>"><%= obj.event_name %></a></td>
+          <% else %>
+            <td><%= obj.event_name %></td>
+          <% end %>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<div class="mobile">
+  <div class="path clearfix">
+    <a href="/home"><%= image_tag "2018pjlogo.png", class:"high_pjlogo" %></a><br>
+    <a href="/home/news"><%= image_tag "news.png" %></a>
+    <a href="/home/event"><%= image_tag "event.png" %></a>
+    <a href="/home/activity"><%= image_tag "activity.png" %></a>
+    <a href="/contacts/new"><%= image_tag "contact.png" %></a>
+  </div>
+
+  <div class="mobile_event">
+    <h1>イベント</h1>
+    <table>
+      <% @events.each do |obj| %>
+      <tr><td><%= obj.event_date %></td>
+        <% if obj.jump_to.length > 1 %>
+        <td><a href="<%= obj.jump_to %>"><%= obj.event_name %></a></td>
+        <% else %>
+        <td><%= obj.event_name %></td>
+        <% end %>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+
+<footer>
+  <div class="clearfix">
+    <a href="/home">
+      <%= image_tag '2018pjlogo.png' %>
+    </a>
+    <p>Copyright © プロンティアットVR <br>All Rights Reserved.</p>
+  </div>
+</footer>
+</div>

@@ -1,0 +1,141 @@
+/*---全体----------------------------------*/
+
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+img {
+  margin: 0;
+}
+
+/*---ヘッダー----------------------------------*/
+/*---パソコン---------------------------------*/
+
+#p_header{
+  margin-bottom: -3px;
+  background-color: #515151;
+  height: 30px;
+  margin-top: -2px;
+  width: 100%;
+}
+
+#p_header p{
+  margin-top: 3px;
+}
+
+#p_header a{
+  color: white;
+  letter-spacing: 1px;
+}
+/*---メイン----------------------------------*/
+/*---パソコン---------------------------------*/
+
+#top img{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+  position: relative;
+  margin-bottom: -370px;
+}
+
+#top{
+  margin: 0;
+  padding: 0;
+}
+
+#logo img{
+  margin: 0;
+  position: absolute;
+  left: 100px;
+  top: 120px;
+  width: 300px;
+}
+
+#pv{
+ margin-bottom: 0;  
+ position: absolute; 
+ left: 120px;
+ top: 380px;
+ margin: 0;
+ line-height: 0;
+}
+
+#frame img{
+  margin: 0;
+  position: absolute;
+  left:63px;
+  top: 310px;
+  width: 360px;
+  height: 260px;
+}
+
+/*---怨挟師とは----------------------------------*/
+/*---パソコン---------------------------------*/
+
+#second img{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+  margin-bottom: -100px;
+}
+
+#box{
+  width: 650px;
+  margin: auto;
+  padding: 80px 100px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255,255,255,0.4)
+}
+#box h1{
+  position: relative;
+  bottom: 30px;
+}
+#box p{
+  position: relative;
+  left: 10px;
+  font-size: 15pt;
+}
+
+/*---メニュー----------------------------------*/
+/*---パソコン---------------------------------*/
+
+#menu_top img{
+  position: relative;
+  width: 90px;
+  float: right;
+  margin-right: 120px;
+  bottom: 20px;
+}
+#menu_under img{
+  position: relative;
+  width: 120px;
+  float: right;
+  margin-right: 80px;
+}
+
+#menu_top{
+  margin-right: 90px;
+}
+
+#menu{
+  position: relative;
+}
+ .clear{
+    clear: both;
+  }
+
+/*---フッター----------------------------------*/
+/*---パソコン---------------------------------*/
+
+#product_f {
+  margin: 0;
+  height: 130px;
+  background-image: url('/assets/footer.jpg');
+}

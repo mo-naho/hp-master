@@ -1,0 +1,96 @@
+// Place all the styles related to the hackathonA controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/*------------------------
+全体
+------------------------*/
+/*
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    //background-color: rgba(16, 69, 112, 0.493);
+}
+*/
+/*------------------------
+ヘッダー
+------------------------*/
+header{
+    margin: auto;
+    text-align: left;
+    background-color: navy;
+}
+
+#rogo{
+    width: 300px;
+    height: auto;
+}
+
+img#start{
+    width: 100%;
+    height: auto;
+}
+/*------------------------
+コンテンツ
+------------------------*/
+#contents{
+    margin: auto;
+    padding: 10px 30px;
+    //background-color: rgba(16, 69, 112, 0.493);
+    background-color: rgb(76, 116, 148);
+}
+
+img#play1{
+    width: 50%;
+    height: 50%;
+    float: left;
+
+}
+
+img#play2{
+    width: 50%;
+    height: 50%;
+}
+
+#text p, #url p, footer p{
+    font-weight: 900;
+}
+
+#url{
+    display: table-cell;
+    width: 300px;
+    vertical-align: middle;
+    padding-left: 30px;
+}
+
+#pronti{
+    display: table-cell;
+    width: 250px;
+    vertical-align: middle;
+}
+
+#pronti img{
+    width: 250px;
+}
+
+.clear{
+    clear: both;
+}
+/*------------------------
+フッター
+------------------------*/
+footer{
+    height: 50px;
+    text-align: center;
+    background-color: navy;
+}
+
+footer p{
+    line-height: 50px;
+}

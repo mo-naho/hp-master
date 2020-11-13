@@ -1,0 +1,39 @@
+<div class="body">
+<div class="name">
+<h2>ニュース設定</h2>
+<p> › 新規作成</p>
+</div>
+
+<% if @info.errors.any? %>
+<ul>
+    <% @info.errors.full_messages.each do |err| %>
+        <li><%= err %></li>
+    <% end %>
+</ul>
+<% end %>
+
+<%= form_for @info,:url => {:action => :create} do |form| %>
+<table>
+    <tr><th>ニュース内容</th>
+        <td><%= form.text_area :main %></td></tr>
+    <tr><th>投稿日時</th>
+        <td><%= raw sprintf(form.datetime_select(
+								:my_date,
+								use_month_numbers: true,
+								start_year:        Time.now.year,
+								end_year:          Time.now.year+1,
+								date_separator: '%s',
+								datetime_separator: '%s',
+								time_separator: '%s'),
+						'年 ', '月 ', '日','時') + '分' %></td></tr>
+    <tr><th>カテゴリ名</th>
+        <td><%= form.collection_select :category_id, Category.all, :id, :name, include_blank: '選択してください' %></td></tr>
+    <tr><th></th>
+        <td><%= form.submit "送信" %></td></tr>
+</table>
+<% end %>
+
+<div class="back">
+  <p><a href="/admin">戻る</a></p>
+</div>
+</div>

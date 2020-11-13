@@ -1,0 +1,135 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+　　　　　　　　　　　　　　　PC版
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*------------------------------------
+　全体
+--------------------------------------*/
+.back{
+  background-image: url(2018festival_haikei.png);
+  background-repeat: repeat-y;
+  background-size: cover;
+  position: relative;
+  top: -5px;
+}
+.festivalevent h2{
+  font-size: 25px;
+}
+.festivalabout h3::before, {
+  content: "【";
+}
+.festivalabout h3::after{
+  content: "】";
+}
+.left, .right{
+  display: table-cell;
+  width: 50%;
+  vertical-align: bottom;
+  text-align: center;
+}
+p#pp{
+  margin-bottom: 0;
+}
+.left h2{
+  border-bottom: 4px solid white;
+  width: 77%;
+}
+.festivaltextbox p, .festivaltextbox h3, .festivaltextbox h2{
+  text-align: left;
+}
+.festivaltextbox img{
+  width: 90%;
+}
+
+/*------------------------------------
+　ヘッダー、大画像
+--------------------------------------*/
+.festivaltop_img{
+  width: 100%;
+}
+.festivalevent{
+  width: 100%;
+  text-align: center;
+  margin-top: -1px;
+}
+.festivalevent_img{
+  text-align: center;
+  width: 100%;
+  background-color: black;
+  position: relative;
+  top: -6px;
+  padding: 10px 0;
+}
+.festivalevent_img img{
+  width: 500px;
+  margin: 10px 0;
+}
+
+/*------------------------------------
+　概要、展示ゲーム
+--------------------------------------*/
+img.fes_head{
+  width: 300px;
+}
+.festivaltextbox{
+  width: 900px;
+  margin: auto auto 50px;
+  padding: 30px 50px;
+  background-color: rgba(0, 0, 0, 0.65);
+  text-align: left;
+}
+.fes_img{
+  border: 5px solid white;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+　　　　　　　　　　　　　　　PC版
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media screen and (max-width:480px){
+/*------------------------------------
+　全体
+--------------------------------------*/
+.mobile img{
+  width: 50%;
+}
+.festival_content p, .festival_content h2, .festival_content h3{
+  text-align: left;
+}
+
+/*------------------------------------
+　ヘッダー、大画像
+--------------------------------------*/
+.festivalevent_img2{
+  width: 60%;
+  margin: auto;
+}
+.festivalevent_img img{
+}
+/*------------------------------------
+　概要、展示ゲーム
+--------------------------------------*/
+.fes_head1, .fes_head2{
+  width: 60%;
+  margin: auto;
+}
+.mobile .festivalabout, .mobile .festivalgame{
+  background-color: rgba(0, 0, 0, 0.65);
+  width: 80%;
+  margin: auto;
+  padding: 10px 20px;
+  border-radius: 0.5em;
+}
+.festivalabout h2{
+  border-bottom: 4px solid white;
+  margin-top: 30px;
+  width: 85%;
+}
+.festivalgame{
+  margin-bottom: 50px;
+}
+
+.festival_content{
+  margin-bottom: 30px;
+}
+
+}//@media screenのかっこ

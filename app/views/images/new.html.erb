@@ -1,0 +1,19 @@
+<div class="body">
+<h1>カテゴリの画像</h1>
+<p>画像をアップロード</p>
+<% if @image.errors.any? %>
+<ul>
+    <% @image.errors.full_messages.each do |err| %>
+        <li><%= err %></li>
+    <% end %>
+</ul>
+<% end %>
+
+<%= form_for @image do |form| %>
+  <%= form.file_field :tag %>
+  <br><br><br>
+  <%= form.submit "送信" %>
+<% end %>
+
+<p><a href="/images">戻る</a></p>
+</div>

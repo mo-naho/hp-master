@@ -1,0 +1,46 @@
+
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>ハッカソンA班</title>
+    </head>
+    <body>
+        <header>
+            <%= image_tag "2018pjlogo.png", id:"rogo" %>
+        </header>
+        <%= image_tag "top_hack_a.png", id:"start" %>
+
+
+        <div id="contents">
+            <h1>About</h1>
+            <h4>『CO2 BUSTER！』このゲームはCO2を模したキャラをビームで撃つシューティングゲームです。</h4>
+            <div id="text">
+            <p>ステージは、今発展して便利になってる反面で、その発展が環境汚染にも繋がってるという意味を込めオフィス街になっています。狭い空間で空中に浮かぶCO2を狙い続けるというのは上を向き続けて首が疲れてしまうので、首を上げる角度を抑えるために長方形で奥行きのあるステージにしたのが工夫したところです。</p>
+            </div>
+            <h4>沢山のCO2を倒して街を綺麗にしていきましょう！</h4>
+            <%= image_tag "IMG_3834.PNG", id:"play1" %>
+            <%= image_tag "IMG_3835.PNG", id:"play2" %>
+            <div id="clear"></div>
+            <br><br><br><br>
+
+            <h1>ProntiatVR</h1>
+            <div id="prontiatVR">
+                <div id="pronti">
+                  <%= image_tag "IMG_3829.JPG" %>
+                </div>
+                <div id="url">
+                    <p></p>
+                    <%= link_to 'プロンティアットVR公式ホームページ',"/home", :style => "color: white;" %>
+                    <p></p>
+                    <%= link_to 'ハッカソンB班ホームページ', "/hackathon_b/index", :style => "color: white;" %>
+                </div>
+            </div>
+
+        <div class="claer"></div>
+        </div>
+
+        <footer>
+            <p>©ProntiatVR</p>
+        </footer>
+    </body>
+</html>

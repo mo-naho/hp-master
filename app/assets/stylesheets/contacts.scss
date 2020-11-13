@@ -1,0 +1,58 @@
+// Place all the styles related to the contacts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+　　　　　　　　　　　　　　　PC版
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#contact_area {
+  width: 700px;
+  margin: 70px auto 90px;
+  text-align: center;
+}
+#contact_area h1{
+  margin: 0;
+}
+#contact_table {
+  width: 600px;
+  margin: 20px auto 10px;
+}
+#contact_table th {
+  text-align: right;
+}
+#contact_table td {
+  text-align: left;
+  padding-left: 20px;
+}
+
+#access_area{
+  text-align: center;
+  width: 700px;
+  margin: 0 auto 70px;
+}
+
+.error_explanation {
+  width: 600px;
+  margin: 10px 0 30px;
+  background-color: rgb(255,232,232);
+  border: 1px solid red;
+  border-radius: 5px;
+  text-align: left;
+}
+.error_explanation h3 {
+  margin: 0;
+  padding: 10px 20px;
+  color: white;
+  background-color: rgb(246,71,71);
+  border-bottom: 1px solid red;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+　　　　　　　　　　　　　　　MOBILE版
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.mobile_contact_form{
+  width: 80%;
+  margin: auto;
+}

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  main: MyString
+  my_date: 2017-09-25 20:42:34
+  category_id: 1
+
+two:
+  main: MyString
+  my_date: 2017-09-25 20:42:34
+  category_id: 1
